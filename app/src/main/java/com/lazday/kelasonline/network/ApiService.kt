@@ -3,11 +3,13 @@ package com.lazday.kelasonline.network
 import com.lazday.kelasonline.ui.course.CategoryResponse
 import com.lazday.kelasonline.ui.course.CourseResponse
 import com.lazday.kelasonline.ui.home.HomeResponse
+import com.lazday.kelasonline.ui.login.LoginData
 import com.lazday.kelasonline.ui.login.LoginResponse
 import com.lazday.kelasonline.ui.module.DetailResponse
 import com.lazday.kelasonline.ui.module.ModuleResponse
 import com.lazday.kelasonline.ui.profile.AvatarResponse
 import okhttp3.MultipartBody
+import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -18,6 +20,15 @@ interface ApiService {
             @Query("email") email: String,
             @Query("password") password: String
     ) : Response<LoginResponse>
+
+//    @POST("api/login")
+//    fun login(@Body loginData: LoginData): Call<LoginResponse>
+
+//    @POST("api/login")
+//    fun login(
+//        @Query("email") email: String,
+//        @Query("password") password: String,
+//    ) : Response<LoginResponse>
 
     @GET("api/course")
     suspend fun course(
@@ -66,4 +77,6 @@ interface ApiService {
             @Part avatar: MultipartBody.Part,
             @Query("id") id: Int
     ) : Response<AvatarResponse>
+
+
 }

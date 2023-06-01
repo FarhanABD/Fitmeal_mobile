@@ -24,7 +24,8 @@ class PopularAdapter (
         val course = courses[position]
         holder.binding.textTitle.text = course.title
         holder.binding.textMentor.text = course.category
-//      holder.binding.textMentor.text = course.mentor
+        holder.binding.textMentor.text = course.mentor
+//        holder.binding.textMentor.text = course.chef
         loadImage(holder.binding.imageThumbnail, course.thumbnail)
         holder.itemView.setOnClickListener {
             listener.onClick( course )

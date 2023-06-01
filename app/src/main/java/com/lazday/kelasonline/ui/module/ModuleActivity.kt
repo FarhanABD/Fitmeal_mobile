@@ -74,8 +74,8 @@ class ModuleActivity : BaseActivity(), ModuleView {
 
         loadImage( binding.imageCover, course.thumbnail )
         binding.textTitle.text = course.title
-//        binding.textMentor.text = course.mentor
         binding.textMentor.text = course.mentor
+//        binding.textMentor.text = course.chef
 
         adapter.addList( module )
         binding.textModules.text = "${module.size} Resep"

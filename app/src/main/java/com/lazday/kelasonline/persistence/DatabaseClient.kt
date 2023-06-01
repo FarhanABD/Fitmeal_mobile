@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 
 //private const val dbName = "KelasOnlineLazday.db"
-private const val dbName = "Kelasonline"
+private const val dbName = "kelasonline"
 
 object DatabaseClient{
     fun getService( context: Context ): DatabaseService {

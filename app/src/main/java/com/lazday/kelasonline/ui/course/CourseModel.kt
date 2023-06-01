@@ -14,6 +14,7 @@ data class CourseData (
         val group: String,
         val thumbnail: String,
 )
+
 //data class CourseData (
 //        val id: Int,
 //        val category: String,
